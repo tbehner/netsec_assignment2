@@ -1,0 +1,94 @@
+Task 2.1    
+    OS (lsb_release -a)
+        Ubuntu (known from Login)
+        
+        No LSB modules are available.
+        Distributor ID: Ubuntu
+        Description:    Ubuntu 14.04.2 LTS
+        Release:        14.04
+        Codename:       trusty
+
+    Network (ifconfig)
+        IP
+            131.220.237.37
+        eth0      Link encap:Ethernet  HWaddr 08:00:27:dc:db:60
+                  inet addr:10.0.0.1  Bcast:10.0.0.255  Mask:255.255.255.0
+
+        eth1      Link encap:Ethernet  HWaddr 08:00:27:21:09:78
+                  inet addr:10.1.1.2  Bcast:10.1.1.255  Mask:255.255.255.0
+        lo        Link encap:Local Loopback
+                  inet addr:127.0.0.1  Mask:255.0.0.0
+
+    Hardware (sudo lshw -short)
+        VirtualBox Mainboard
+        82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]
+        Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+        VirtualBox Guest Service
+        VirtualBox Graphics Adapter
+        DVD reader
+        /dev/sda    disk       85GB VBOX HARDDISK
+        /dev/sda1   volume     76GiB EXT4 volume
+        /dev/sda2   volume     4093MiB Extended partition
+        /dev/sda5   volume     4093MiB Linux swap / Solaris partition
+        /dev/sdb    disk       107GB VBOX HARDDISK
+        /dev/sdb1   volume     99GiB EXT4 volume
+        128KiB BIOS
+        3953MiB System memory
+        82540EM Gigabit Ethernet Controller on eth0,eth1,eth2,eth3
+
+    Disks (fdisk -l)
+        Device Boot      Start         End      Blocks   Id  System
+        /dev/sda1   *        2048   159385599    79691776   83  Linux
+        /dev/sda2       159387646   167770111     4191233    5  Extended
+        /dev/sda5       159387648   167770111     4191232   82  Linux swap / Solaris
+
+           Device Boot      Start         End      Blocks   Id  System
+        /dev/sdb1            2048   209715199   104856576   83  Linux
+
+    Candy (find / -type f -print | grep 'candy') (find / -type f -print | grep 'candy' -r search * .*)
+        /home/3232candy322
+        (ls -l /home/3232candy322)
+        -rwxrwxrwx 1 root root 0 May  9 14:29 3232candy322
+        
+        There is an empty file called "3232candy322" in the home directory
+        
+    Services (service --status-all)
+        [ + ]  acpid
+        [ - ]  apache2
+        [ + ]  apparmor
+        [ ? ]  apport
+        [ + ]  atd
+        [ ? ]  console-setup
+        [ + ]  cron
+        [ - ]  dbus
+        [ ? ]  dns-clean
+        [ + ]  friendly-recovery
+        [ - ]  grub-common
+        [ ? ]  irqbalance
+        [ ? ]  killprocs
+        [ ? ]  kmod
+        [ ? ]  networking
+        [ + ]  nmbd
+        [ ? ]  ondemand
+        [ ? ]  pppd-dns
+        [ - ]  procps
+        [ ? ]  rc.local
+        [ + ]  resolvconf
+        [ + ]  rpcbind
+        [ - ]  rsync
+        [ + ]  rsyslog
+        [ + ]  samba
+        [ - ]  samba-ad-dc
+        [ ? ]  screen-cleanup
+        [ ? ]  sendsigs
+        [ + ]  smbd
+        [ - ]  ssh
+        [ ? ]  stunnel4
+        [ - ]  sudo
+        [ + ]  udev
+        [ ? ]  umountfs
+        [ ? ]  umountnfs.sh
+        [ ? ]  umountroot
+        [ - ]  unattended-upgrades
+        [ - ]  urandom
+        [ - ]  x11-common

@@ -1,0 +1,13 @@
+Task 2.4
+    a)
+        This method would be secure if it was for sure, that Alice is the person who have added the second padlock.
+        In this case, nobody could open the box until Bob has removed his lock and from this point, only Alice would be able to open the box.
+        
+        Now what could happen, is that not Alice is the one who adds the second lock, e.g. the deliveryman could add a second padlock and return the box to Bob.
+        He would never know that the padlock was not added by Alice and removes his own lock. Now the deliveryman would be able to view the content, because he owns the key to the box.
+        
+        For cryptographic means the circumstances are pretty much the same. You can not be sure, that there is no person in the middle who intercepts the packet and adds his own lock.
+        
+    b)
+        This method works to keep the integrity of the data. After using the XOR operation twice, the data is again the same as before. The order in which this operations are processed has no impact.
+        Except for what we described in sub task a, this method would also be secure.
