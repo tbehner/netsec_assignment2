@@ -41,8 +41,8 @@ def plot_average_graph(average_tries, average_time):
   width = 0.35
   tries = [average_tries[x] for x in sorted(average_tries)]
   ind = np.arange(N)
-  plt.bar(ind,tries, width)
-  plt.xticks(ind+width/2, sorted(average_tries.keys()))
+  plt.plot(ind,tries, 'bo--')
+  plt.xticks(ind, sorted(average_tries.keys()))
   plt.xlim(-1,len(average_tries.keys())+1)
   plt.xlabel("Length of bit prefix")
   plt.ylabel("number of tries")
@@ -50,8 +50,8 @@ def plot_average_graph(average_tries, average_time):
   plt.close()
 
   times = [average_time[x] for x in sorted(average_time)]
-  plt.bar(ind, times, width)
-  plt.xticks(ind+width/2, sorted(average_time.keys()))
+  plt.plot(ind, times, 'bo--')
+  plt.xticks(ind, sorted(average_time.keys()))
   plt.xlim(-1, len(average_time.keys())+1)
   plt.xlabel("Length of bit prefix")
   plt.ylabel("time [s]")
