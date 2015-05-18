@@ -64,7 +64,7 @@ average_tries = defaultdict(float)
 nmbr_loops = 5
 
 try:
-  with open("Collider data.txt", "w") as f:
+  with open("Collider_data.txt", "w") as f:
     f.write("Prefix Length\tStep\tTime\tTries\r\n")
     for prefix_length in [4,8,12,16,20]:
       results_time = []
