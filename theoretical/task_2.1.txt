@@ -45,12 +45,6 @@ Task 2.1
            Device Boot      Start         End      Blocks   Id  System
         /dev/sdb1            2048   209715199   104856576   83  Linux
 
-    Candy (find / -type f -print | grep 'candy') (find / -type f -print | grep 'candy' -r search * .*)
-        /home/3232candy322
-        (ls -l /home/3232candy322)
-        -rwxrwxrwx 1 root root 0 May  9 14:29 3232candy322
-        
-        There is an empty file called "3232candy322" in the home directory
         
     Services (service --status-all)
         [ + ]  acpid

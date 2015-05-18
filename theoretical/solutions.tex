@@ -15,20 +15,80 @@
 \usepackage{amsmath, amssymb, stmaryrd}
 \usepackage{amsthm, mathtools}
 
-\newtheorem{exercise}{Exercise}
+\theoremstyle{definition}
+\newtheorem{exercise}{Task}
 
 \usepackage{tikz}
-\title{Titel}
+\title{Assignment Sheet 2}
 \author{Timm Behner \and Christopher Kannen \and Eva-Lotta Teutrine}
 \date{\today}
 
 \begin{document}
+\maketitle
 \begin{exercise}\hfill
+    For Information about hellgate see task\_2.1.txt. For information about
+    other computer found on the network see netscan.log.
+    Candy:
     \begin{itemize}
         \item The User dentist has changed his password to \\
             \texttt{mY\_so0p3R\_dO0pEr\_s3cr3t\_P4s5W0rd\_1s\_rock\_candy}\\
             This could be found in the \texttt{.bash\_history} in his home
             folder.
+        \item There is an empty file called ``3232candy322'' in the home directory
+            Found by
+            \begin{verbatim}
+(find / -type f -print | grep 'candy') 
+    (find / -type f -print | grep 'candy' -r search * .*)
+            \end{verbatim}
     \end{itemize}
+\end{exercise}
+
+\begin{exercise}
+    See dns\_sniffer.py and dnssniff.log for a sample from hellgate.
+\end{exercise}
+
+\begin{exercise}
+    See collider.py. The plotting was implemented with pyplot in the script.
+    For sample output see 
+    \begin{itemize}
+        \item Collider\_data.txt
+        \item 4.png
+        \item 8.png
+        \item 12.png
+        \item 16.png
+        \item 20.png
+        \item average\_time.png
+        \item average\_time.png
+    \end{itemize}
+\end{exercise}
+
+\begin{exercise}
+    \begin{enumerate}[a)]
+        \item This method would be secure if it was for sure, that Alice is the
+            person who have added the second padlock.
+            In this case, nobody could open the box until Bob has removed his lock
+            and from this point, only Alice would be able to open the box.
+        
+            Now what could happen, is that not Alice is the one who adds the
+            second lock, e.g. the deliveryman could add a second padlock and
+            return the box to Bob.  He would never know that the padlock was not
+            added by Alice and removes his own lock. Now the deliveryman would
+            be able to view the content, because he owns the key to the box.
+        
+            For cryptographic means the circumstances are pretty much the same. You
+            can not be sure, that there is no person in the middle who intercepts
+            the packet and adds his own lock.
+        \item  
+            This method works to keep the integrity of the data. After using the
+            XOR operation twice, the data is again the same as before. The order
+            in which this operations are processed has no impact.
+            Except for what we described in sub task a, this method would also be secure.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    See hmac.py for the implementation and
+    netsec2015\_exercise\_sheet\_02\_hmac.log for the HMAC of the assignment
+    sheet.
 \end{exercise}
 \end{document}
